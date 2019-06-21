@@ -5,6 +5,9 @@
 * [Default.aspx.cs](./CS/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/Default.aspx.vb))
 <!-- default file list end -->
 # ASPxGridView - Batch Editing - A simple implementation of an EditItemTemplate
+<!-- run online -->
+**[[Run Online]](https://codecentral.devexpress.com/t115096/)**
+<!-- run online end -->
 
 
 <p>This example demonstrates how to create a custom editor inside a column's EdittemTemplate when ASPxGridView is in Batch Edit mode. Since ASPxGridView performs batch editing on the client side, we cannot process or pass values from editors placed inside templates on the server side. Thus, all processing will be performed on the client side. </p>

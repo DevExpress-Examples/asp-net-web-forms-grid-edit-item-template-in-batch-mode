@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
 
-<%@ Register Assembly="DevExpress.Web.v16.1, Version=16.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+<%@ Register Assembly="DevExpress.Web.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
     Namespace="DevExpress.Web" TagPrefix="dx" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -15,7 +15,7 @@
             var cellInfo = e.rowValues[templateColumn.index];
             C1spinEdit.SetValue(cellInfo.value);
             if (e.focusedColumn === templateColumn)
-                C1spinEdit.SetFocus();
+                C1spinEdit.Focus();
         }
         function Grid_BatchEditEndEditing(s, e) {
             var templateColumn = s.GetColumnByField("C1");
@@ -67,7 +67,7 @@
 <body>
     <form id="frmMain" runat="server">
         <dx:ASPxGridView ID="Grid" runat="server" KeyFieldName="ID" Width="600" OnBatchUpdate="Grid_BatchUpdate" 
-            OnRowInserting="Grid_RowInserting" OnRowUpdating="Grid_RowUpdating" OnRowDeleting="Grid_RowDeleting" ClientInstanceName="grid">
+            OnRowInserting="Grid_RowInserting" OnRowUpdating="Grid_RowUpdating" OnRowDeleting="Grid_RowDeleting" ClientInstanceName="grid" Theme="Office365">
             <ClientSideEvents BatchEditStartEditing="Grid_BatchEditStartEditing" BatchEditEndEditing="Grid_BatchEditEndEditing"
                 BatchEditRowValidating="Grid_BatchEditRowValidating" />
             <Columns>
@@ -84,6 +84,7 @@
                 <dx:GridViewDataCheckColumn Width="100" FieldName="C4" />
                 <dx:GridViewDataDateColumn Width="100" FieldName="C5" />
             </Columns>
+            <SettingsPager PageSize="3" />
             <SettingsEditing Mode="Batch" />
         </dx:ASPxGridView>
 

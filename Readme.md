@@ -67,7 +67,7 @@ Follow the steps below:
 5. Handle the editor's client-side `KeyDown` and `LostFocus` events to emulate the editor behavior when a user presses a key or clicks outside the editor.
 
 > **Note**  
-> When you implement an edit item template, the control does not update the data source automatically. Handle the grid's server-side [RowUpdating](https://docs.devexpress.devx/AspNet/DevExpress.Web.ASPxGridView.RowUpdating), [RowInserting](https://docs.devexpress.devx/AspNet/DevExpress.Web.ASPxGridView.RowInserting), and [RowDeleting](https://docs.devexpress.devx/AspNet/DevExpress.Web.ASPxGridView.RowDeleting) event to manually update the data source.
+> When you implement an edit item template, the control does not update the data source automatically. Handle the grid's server-side [RowUpdating](https://docs.devexpress.devx/AspNet/DevExpress.Web.ASPxGridView.RowUpdating), [RowInserting](https://docs.devexpress.devx/AspNet/DevExpress.Web.ASPxGridView.RowInserting), and [RowDeleting](https://docs.devexpress.devx/AspNet/DevExpress.Web.ASPxGridView.RowDeleting) events to manually update the data source.
 
 
 ## Files to Review

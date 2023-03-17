@@ -21,7 +21,7 @@ Follow the steps below:
     </dx:GridViewDataColumn>
     ```
 
-2. Handle the grid's client-side [BatchEditStartEditing](https://docs.devexpress.devx/AspNet/js-ASPxClientGridView.BatchEditStartEditing) event. In the handler, use the [rowValues](https://docs.devexpress.devx/AspNet/js-ASPxClientGridViewBatchEditStartEditingEventArgs.rowValues) argument property to get the value of the processed cell, call the editor's `SetValue` method to assign the cell value to the editor, and focus the editor.
+2. Handle the grid's client-side [BatchEditStartEditing](https://docs.devexpress.devx/AspNet/js-ASPxClientGridView.BatchEditStartEditing) event. In the handler, use the [rowValues](https://docs.devexpress.devx/AspNet/js-ASPxClientGridViewBatchEditStartEditingEventArgs.rowValues) argument property to get the value of the processed cell, call the editor's `SetValue` method to assign the cell value to the editor, and focus the editor.
 
     ```js
     function Grid_BatchEditStartEditing(s, e) {

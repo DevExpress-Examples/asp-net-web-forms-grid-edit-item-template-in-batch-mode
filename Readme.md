@@ -3,7 +3,7 @@
 **[[Run Online]](https://codecentral.devexpress.com/t115096/)**
 <!-- run online end -->
 
-This example demonstrates how to create an edit item template, add an editor to the template, and specify the grid's cell edit functionality in batch mode.
+This example demonstrates how to create an edit item template, add an editor to the template, and configure the grid's cell edit functionality in batch mode.
 
 ![EditItemTemplate](editItemTemplate.png)
 
@@ -21,7 +21,11 @@ Follow the steps below:
     </dx:GridViewDataColumn>
     ```
 
-2. Handle the grid's client-side [BatchEditStartEditing](https://docs.devexpress.devx/AspNet/js-ASPxClientGridView.BatchEditStartEditing) event. In the handler, use the [rowValues](https://docs.devexpress.devx/AspNet/js-ASPxClientGridViewBatchEditStartEditingEventArgs.rowValues) argument property to get the value of the processed cell, call the editor's `SetValue` method to assign the cell value to the editor, and focus the editor.
+2. Handle the grid's client-side [BatchEditStartEditing](https://docs.devexpress.devx/AspNet/js-ASPxClientGridView.BatchEditStartEditing) event and do the following in the handler:
+
+   * Use the [rowValues](https://docs.devexpress.devx/AspNet/js-ASPxClientGridViewBatchEditStartEditingEventArgs.rowValues) argument property to get the value of the processed cell.
+   * Call the editor's `SetValue` method to assign the cell value to the editor.
+   * Focus the editor.
 
     ```js
     function Grid_BatchEditStartEditing(s, e) {
@@ -67,7 +71,7 @@ Follow the steps below:
 5. Handle the editor's client-side `KeyDown` and `LostFocus` events to emulate the editor behavior when a user presses a key or clicks outside the editor.
 
 > **Note**  
-> When you implement an edit item template, the control does not update the data source automatically. Handle the grid's server-side [RowUpdating](https://docs.devexpress.devx/AspNet/DevExpress.Web.ASPxGridView.RowUpdating), [RowInserting](https://docs.devexpress.devx/AspNet/DevExpress.Web.ASPxGridView.RowInserting), and [RowDeleting](https://docs.devexpress.devx/AspNet/DevExpress.Web.ASPxGridView.RowDeleting) events to manually update the data source.
+> When you implement an edit item template, the control does not update the data source automatically. Handle the grid's server-side [RowUpdating](https://docs.devexpress.devx/AspNet/DevExpress.Web.ASPxGridView.RowUpdating), [RowInserting](https://docs.devexpress.devx/AspNet/DevExpress.Web.ASPxGridView.RowInserting), and [RowDeleting](https://docs.devexpress.devx/AspNet/DevExpress.Web.ASPxGridView.RowDeleting) events to update the data source manually.
 
 
 ## Files to Review

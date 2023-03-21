@@ -5,7 +5,7 @@
 <!-- default badges end -->
 # Grid View for ASP.NET Web Forms - How to implement an edit item template in batch mode
 <!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/t115096/)**
+**[[Run Online]](https://codecentral.devexpress.com/128532952/)**
 <!-- run online end -->
 
 This example demonstrates how to create an edit item template, add an editor to the template, and configure the grid's cell edit functionality in batch mode.

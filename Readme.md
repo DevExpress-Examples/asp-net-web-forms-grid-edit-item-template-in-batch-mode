@@ -16,7 +16,7 @@ This example demonstrates how to create an edit item template, add an editor to 
 
 Follow the steps below:
 
-1. Specify a column's [EditItemTemplate](https://docs.devexpress.devx/AspNet/DevExpress.Web.GridViewDataColumn.EditItemTemplate?p=netframework) property and add an editor to the template.
+1. Specify a column's [EditItemTemplate](https://docs.devexpress.com/AspNet/DevExpress.Web.GridViewDataColumn.EditItemTemplate) property and add an editor to the template.
 
     ```aspx
     <dx:GridViewDataColumn FieldName="C1">
@@ -26,9 +26,9 @@ Follow the steps below:
     </dx:GridViewDataColumn>
     ```
 
-2. Handle the grid's client-side [BatchEditStartEditing](https://docs.devexpress.devx/AspNet/js-ASPxClientGridView.BatchEditStartEditing) event and do the following in the handler:
+2. Handle the grid's client-side [BatchEditStartEditing](https://docs.devexpress.com/AspNet/js-ASPxClientGridView.BatchEditStartEditing) event and do the following in the handler:
 
-   * Use the [rowValues](https://docs.devexpress.devx/AspNet/js-ASPxClientGridViewBatchEditStartEditingEventArgs.rowValues) argument property to get the value of the processed cell.
+   * Use the [rowValues](https://docs.devexpress.com/AspNet/js-ASPxClientGridViewBatchEditStartEditingEventArgs.rowValues) argument property to get the value of the processed cell.
    * Call the editor's `SetValue` method to assign the cell value to the editor.
    * Focus the editor.
 
@@ -44,7 +44,7 @@ Follow the steps below:
     }
     ```
 
-3. Handle the grid's client-side [BatchEditEndEditing](https://docs.devexpress.devx/AspNet/js-ASPxClientGridView.BatchEditEndEditing) event. In the handler, get the editor's value and use the [rowValues](https://docs.devexpress.devx/AspNet/js-ASPxClientGridViewBatchEditEndEditingEventArgs.rowValues) argument property to assign this value to the processed cell.
+3. Handle the grid's client-side [BatchEditEndEditing](https://docs.devexpress.com/AspNet/js-ASPxClientGridView.BatchEditEndEditing) event. In the handler, get the editor's value and use the [rowValues](https://docs.devexpress.com/AspNet/js-ASPxClientGridViewBatchEditEndEditingEventArgs.rowValues) argument property to assign this value to the processed cell.
 
     ```js
     function Grid_BatchEditEndEditing(s, e) {
@@ -58,7 +58,7 @@ Follow the steps below:
     }
     ```
 
-4. Handle the grid's client-side [BatchEditRowValidating](https://docs.devexpress.devx/AspNet/js-ASPxClientGridView.BatchEditRowValidating) event. In the handler, use the [validationInfo](https://docs.devexpress.devx/AspNet/js-ASPxClientGridViewBatchEditRowValidatingEventArgs.validationInfo) argument property to define whether the entered data is valid and specify an error text string for invalid data cells.
+4. Handle the grid's client-side [BatchEditRowValidating](https://docs.devexpress.com/AspNet/js-ASPxClientGridView.BatchEditRowValidating) event. In the handler, use the [validationInfo](https://docs.devexpress.com/AspNet/js-ASPxClientGridViewBatchEditRowValidatingEventArgs.validationInfo) argument property to define whether the entered data is valid and specify an error text string for invalid data cells.
 
     ```js
     function Grid_BatchEditRowValidating(s, e) {
@@ -76,7 +76,7 @@ Follow the steps below:
 5. Handle the editor's client-side `KeyDown` and `LostFocus` events to emulate the editor behavior when a user presses a key or clicks outside the editor.
 
 > **Note**  
-> When you implement an edit item template, the control does not update the data source automatically. Handle the grid's server-side [RowUpdating](https://docs.devexpress.devx/AspNet/DevExpress.Web.ASPxGridView.RowUpdating), [RowInserting](https://docs.devexpress.devx/AspNet/DevExpress.Web.ASPxGridView.RowInserting), and [RowDeleting](https://docs.devexpress.devx/AspNet/DevExpress.Web.ASPxGridView.RowDeleting) events to update the data source manually.
+> When you implement an edit item template, the control does not update the data source automatically. Handle the grid's server-side [RowUpdating](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxGridView.RowUpdating), [RowInserting](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxGridView.RowInserting), and [RowDeleting](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxGridView.RowDeleting) events to update the data source manually.
 
 
 ## Files to Review
@@ -88,7 +88,7 @@ Follow the steps below:
 
 * [Grid in Batch Edit Mode](https://docs.devexpress.com/AspNet/16443/components/grid-view/concepts/edit-data/batch-edit-mode)
 * [Grid View Templates](https://docs.devexpress.com/AspNet/3718/components/grid-view/concepts/templates)
-* [EditItemTemplate](https://docs.devexpress.devx/AspNet/DevExpress.Web.GridViewDataColumn.EditItemTemplate)
+* [EditItemTemplate](https://docs.devexpress.com/AspNet/DevExpress.Web.GridViewDataColumn.EditItemTemplate)
 
 ## More Examples
 
